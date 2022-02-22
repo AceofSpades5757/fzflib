@@ -33,23 +33,23 @@ class TestCase(unittest.TestCase):
         shutil.rmtree(TARGET_DIR, onerror=error_handler)
 
     def test_default(self):
-        FZF.install()
+        FZF.download()
         self.assertEquals(Path(TARGET_DIR).exists(), True)
 
     def test_http(self):
-        FZF.install('http')
+        FZF.download('http')
         self.assertEquals(Path(TARGET_DIR).exists(), True)
 
     def test_https(self):
-        FZF.install('https')
+        FZF.download('https')
         self.assertEquals(Path(TARGET_DIR).exists(), True)
 
     def test_ssh(self):
-        FZF.install('ssh')
+        FZF.download('ssh')
         self.assertEquals(Path(TARGET_DIR).exists(), True)
 
     def test_gh(self):
-        FZF.install('gh')
+        FZF.download('gh')
         self.assertEquals(Path(TARGET_DIR).exists(), True)
 
 
