@@ -1,3 +1,8 @@
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/fzflib?label=Python%20Version&logo=python&logoColor=yellow)
+![PyPI - License](https://img.shields.io/pypi/l/fzflib?color=green)
+![PyPI](https://img.shields.io/pypi/v/fzflib?color=darkred)
+
 # Description
 
 Bring the incredible utility of FZF to Python.
