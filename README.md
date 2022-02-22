@@ -11,6 +11,8 @@ Probably one of the best tools I've ever found.
 
 # Installation
 
+`pip install fzflib`
+
 ## Requirements
 
 * [FZF](https://github.com/junegunn/fzf)
