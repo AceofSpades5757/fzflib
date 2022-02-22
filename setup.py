@@ -17,7 +17,7 @@ setuptools.setup(
     long_description_content_type='text/markdown',
     license='MIT',
     python_requires='>=3.6',
-    packages=setuptools.find_packages(exclude=['tests']),
+    packages=setuptools.find_packages('src', exclude=['tests']),
     package_dir={'': 'src'},
     classifiers=[
         "Programming Language :: Python :: 3",
