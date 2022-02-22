@@ -43,6 +43,12 @@ Set different working directory, when running FZF.
 
 `fzf.cwd: PathLike = '~'`
 
+## Install FZF
+
+This will attempt to install FZF on your machine.
+
+`FZF.install()`
+
 # Contribution
 
 This package follows a similar style found in the Python standard library of using a central class, or set of classes, to generate a set of useful functions (e.g. `difflib`).
