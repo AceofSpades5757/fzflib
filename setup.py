@@ -11,6 +11,7 @@ setuptools.setup(
     version='0.1.0',
     author='Kyle L. Davis',
     author_email='AceofSpades5757.github@gmail.com',
+    url='https://github.com/AceofSpades5757/fzflib',
     description='A Python library for interacting with FZF.',
     long_description=long_description,
     long_description_content_type='text/markdown',
