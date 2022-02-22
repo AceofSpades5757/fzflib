@@ -11,6 +11,8 @@ Probably one of the best tools I've ever found.
 
 # Installation
 
+Using the official The Python Package Index (PyPI).
+
 `pip install fzflib`
 
 ## Requirements
