@@ -1,3 +1,7 @@
 # Local Installation
 -e .
+wheel
+setuptools
+
+# 3rd Party
 tox
