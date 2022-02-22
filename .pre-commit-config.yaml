@@ -6,17 +6,21 @@ repos:
   - id: check-yaml
     name: Check Yaml
   - id: end-of-file-fixer
+    name: Fix End of Files
   - id: trailing-whitespace
+    name: Fix Trailing Whitespace
 # Python - Reorder Imports
 - repo: https://github.com/asottile/reorder_python_imports
   rev: v2.7.1
   hooks:
   - id: reorder-python-imports
+    name: Reorder Python Imports
 # Python - Code Formatting
 - repo: https://github.com/psf/black
   rev: 22.1.0
   hooks:
   - id: black
+    name: Code Formatter (black)
     exclude: hooks/*
     args:
     - --line-length
@@ -27,4 +31,5 @@ repos:
   rev: v0.931
   hooks:
   - id: mypy
+    name: Code Linter (Type Checking with mypy)
     additional_dependencies: [types-pyyaml]
