@@ -2,6 +2,7 @@
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/fzflib?label=Python%20Version&logo=python&logoColor=yellow)
 ![PyPI - License](https://img.shields.io/pypi/l/fzflib?color=green)
 ![PyPI](https://img.shields.io/pypi/v/fzflib?color=darkred)
+[![Coverage](https://github.com/AceofSpades5757/fzflib/actions/workflows/tests.yml/badge.svg)](https://github.com/AceofSpades5757/fzflib/actions/workflows/tests.yml)
 
 # Description
 
