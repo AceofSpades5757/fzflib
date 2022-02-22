@@ -1,8 +1,15 @@
-from typing import Final
+import sys
+
+if sys.version_info > (3, 7):
+    from typing import Final
 from typing import Iterable
 from typing import Union
 
 
-ENCODING: Final[str] = 'utf-8'
+if sys.version_info > (3, 7):
+    ENCODING: Final[str] = 'utf-8'
+    MULTI_FLAG: Final[str] = '--multi'
+else:
+    ENCODING: str = 'utf-8'
+    MULTI_FLAG: str = '--multi'
 FZFInputValues = Union[bytes, str, Iterable[str], Iterable[bytes]]
-MULTI_FLAG: Final[str] = '--multi'
