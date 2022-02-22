@@ -35,6 +35,7 @@ repos:
     entry: python -m unittest discover
     args: [
       "--start-directory", "tests",
+      "--pattern", "*_test.py",
     ]
     language: python
     'types': [python]
