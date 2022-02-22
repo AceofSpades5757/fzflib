@@ -1,12 +1,12 @@
 import sys
 
-if sys.version_info > (3, 7):
+if not sys.version_info < (3, 8):
     from typing import Final
 from typing import Iterable
 from typing import Union
 
 
-if sys.version_info > (3, 7):
+if not sys.version_info < (3, 8):
     ENCODING: Final[str] = 'utf-8'
     MULTI_FLAG: Final[str] = '--multi'
 else:
