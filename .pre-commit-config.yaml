@@ -4,6 +4,7 @@ repos:
   rev: v4.1.0
   hooks:
   - id: check-yaml
+    name: Check Yaml
   - id: end-of-file-fixer
   - id: trailing-whitespace
 # Python - Reorder Imports
