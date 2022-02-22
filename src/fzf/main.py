@@ -1,6 +1,7 @@
 import logging.config
 import subprocess
 from pathlib import Path
+from typing import List
 from typing import Optional
 from typing import Union
 
@@ -26,7 +27,7 @@ class FZF:
         input: Optional[str] = None,
         cwd: PathLike = None,
         multi: bool = False,
-        fzf_extras: list[str] = None,
+        fzf_extras: List[str] = None,
     ) -> None:
 
         if executable is None:
@@ -40,13 +41,13 @@ class FZF:
         self.multi: bool = multi
 
         # Extra Arguments
-        self.fzf_args: list = fzf_extras
+        self.fzf_args: List = fzf_extras
 
-    def run(self, *args, **kwargs) -> Union[str, list[str]]:
+    def run(self, *args, **kwargs) -> Union[str, List[str]]:
         """Given current configuration, run fzf and return selection."""
 
         # Buid Command
-        command: list[str] = [self.fzf]
+        command: List[str] = [self.fzf]
         if self.multi:
             command.append(MULTI_FLAG)
 
