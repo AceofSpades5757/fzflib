@@ -13,8 +13,8 @@ logging_config: dict = dict(
     root=dict(
         level=logging.DEBUG,
         handlers=[
-            'stream_handler',
-            'file_handler',
+            # 'stream_handler',
+            'file_handler'
         ],
     ),
     formatters={
@@ -23,20 +23,20 @@ logging_config: dict = dict(
             'format': '{asctime} - {name} - {levelname:<8} - {message}',
             'style': '{',
             'validate': True,
-        },
+        }
     },
     handlers={
-        'stream_handler': {
-            'level': logging.DEBUG,
-            'class': 'logging.StreamHandler',
-            'formatter': 'default',
-        },
+        # 'stream_handler': {
+        # 'level': logging.DEBUG,
+        # 'class': 'logging.StreamHandler',
+        # 'formatter': 'default',
+        # },
         'file_handler': {
             'level': logging.DEBUG,
             'class': 'logging.FileHandler',
             'formatter': 'default',
             'filename': log_file,
-        },
+        }
     },
     loggers={},
 )
