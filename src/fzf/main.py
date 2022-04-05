@@ -123,7 +123,7 @@ class FZF:
 
         if method == 'https' or method == 'http':
             exe: str = 'git'
-            args: list[str] = [
+            args: List[str] = [
                 'clone',
             ]
             uri: str = 'https://github.com/junegunn/fzf.git'
@@ -142,6 +142,6 @@ class FZF:
             options = []
             uri = 'junegunn/fzf'
 
-        command: list[str] = [exe] + args + options + [uri]
+        command: List[str] = [exe] + args + options + [uri]
 
         subprocess.run(command)
