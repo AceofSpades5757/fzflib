@@ -10,7 +10,7 @@ with open('LICENSE', 'r') as fin:
 
 setuptools.setup(
     name='fzflib',
-    version='0.1.3',
+    version='0.1.4',
     license='MIT',
     author='Kyle L. Davis',
     author_email='AceofSpades5757.github@gmail.com',
@@ -20,10 +20,7 @@ setuptools.setup(
     long_description_content_type='text/markdown',
     python_requires='>=3.6',
     packages=setuptools.find_packages('src'),
-    package_dir={
-        '': 'src',
-        'fzflib': 'src/fzflib',
-    },
+    package_dir={'': 'src', 'fzflib': 'src/fzflib'},
     classifiers=[
         'Programming Language :: Python :: 3',
         'Operating System :: OS Independent',
