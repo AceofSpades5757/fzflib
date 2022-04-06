@@ -14,9 +14,10 @@ endif
 help:
 	@echo "---------------HELP---------------------------"
 	@echo "Manage $(PROJECT_NAME). Usage:"
-	@echo "make test   - Test."
-	@echo "make clean  - Clean build directories, temporary files, and caches."
-	@echo "make deploy - Deploy to PyPi."
+	@echo "make test    - Test."
+	@echo "make clean   - Clean build directories, temporary files, and caches."
+	@echo "make build   - Build with setup.py."
+	@echo "make release - Deploy to PyPi."
 	@echo "----------------------------------------------"
 
 test:
