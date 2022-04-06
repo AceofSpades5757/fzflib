@@ -4,7 +4,7 @@ VENV_DIR = .venv
 
 ifeq ($(OS),Windows_NT)
 	PYTHON = py
-	VENV_BIN = .\.venv\Scripts
+	VENV_BIN = ./.venv/Scripts
 else
 	PYTHON = python3
 	VENV_BIN = ./.venv/bin
@@ -49,7 +49,7 @@ build:
 	# Build
 	${VENV_BIN}/python setup.py sdist bdist_wheel
 
-release:
+release: build
 	@echo "Deploying $(PROJECT_NAME) to PyPi."
-	# Build and Upload Release
-	${VENV_BIN}/python setup.py sdist bdist_wheel upload
+	${VENV_BIN}/pip install --upgrade twine
+	${VENV_BIN}/python -m twine upload dist/*
