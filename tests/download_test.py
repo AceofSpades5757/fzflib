@@ -4,7 +4,7 @@ import unittest
 from pathlib import Path
 from typing import Callable
 
-from fzf import FZF
+from fzflib import FZF
 
 
 os.chdir(Path(__file__).parent)

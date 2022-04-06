@@ -1,6 +1,6 @@
 import unittest
 
-from fzf import FZF
+from fzflib import FZF
 
 
 class TestCase(unittest.TestCase):
