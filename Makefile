@@ -1,9 +1,12 @@
 # Variables
-PROJECT_NAME="fzflib"
+PROJECT_NAME = fzflib
+VENV_DIR = .venv
 
 ifeq ($(OS),Windows_NT)
+	PYTHON = py
 	VENV_BIN = .\.venv\Scripts
 else
+	PYTHON = python3
 	VENV_BIN = ./.venv/bin
 endif
 
@@ -20,9 +23,15 @@ help:
 	@echo "make release - Deploy to PyPi."
 	@echo "----------------------------------------------"
 
+venv:
+	$(PYTHON) -m venv $(VENV_DIR)
+	${VENV_BIN}/pip install --upgrade pip
+	$(VENV_BIN)/pip install --upgrade -r requirments.txt
+	$(VENV_BIN)/pip install --upgrade -r requirments-dev.txt
+
 test:
 	@echo "Testing $(PROJECT_NAME)."
-	${VENV_BIN}/python -m pip install --upgrade pip
+	${VENV_BIN}/pip install --upgrade pip
 	${VENV_BIN}/pip install tox tox-gh-actions
 	${VENV_BIN}/tox
 
