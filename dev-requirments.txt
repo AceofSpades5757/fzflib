@@ -1,7 +1,9 @@
-# Local Installation
+# Local Package Installation
 -e .
+
+# Build Tools
 wheel
 setuptools
 
-# 3rd Party
+# Test Tools
 tox
