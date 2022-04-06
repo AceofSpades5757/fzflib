@@ -1,4 +1,4 @@
-from fzflib.main import FZF
+from fzflib.fzf import FZF
 
 
 __all__ = [
