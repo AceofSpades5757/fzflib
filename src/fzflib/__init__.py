@@ -1,6 +1,6 @@
 from fzflib.main import FZF
 
 
-__all__: list[str] = [
+__all__ = [
     'FZF',
 ]
