@@ -7,10 +7,8 @@ class TestCase(unittest.TestCase):
     """Test Case"""
 
     def test_simple(self):
-        """Simple test"""
-        # fzf = FZF()
-        # fzf.run()
-        ...
+        fzf = FZF()
+        self.assertIsNotNone(fzf)
 
 
 if __name__ == '__main__':
