@@ -34,6 +34,12 @@ clean:
 	rm -rf **/__pycache__/
 	rm -rf **/*.egg-info/
 
-deploy:
+build:
+	@echo "Building $(PROJECT_NAME)."
+	# Build
+	${VENV_BIN}/python setup.py sdist bdist_wheel
+
+release:
 	@echo "Deploying $(PROJECT_NAME) to PyPi."
-	@echo "Not Implemented."
+	# Build and Upload Release
+	${VENV_BIN}/python setup.py sdist bdist_wheel upload
