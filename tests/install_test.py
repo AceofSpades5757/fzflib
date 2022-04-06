@@ -25,6 +25,7 @@ class TestCase(unittest.TestCase):
     """Test Case"""
 
     def setUp(self):
+        self.skipTest("Test downloads and runs an install.")
         if Path(TARGET_DIR).exists():
             shutil.rmtree(TARGET_DIR, onerror=error_handler)
 
