@@ -3,13 +3,12 @@ import shutil
 import unittest
 from pathlib import Path
 from typing import Callable
-from typing import Final
 
 from fzf import FZF
 
 
 os.chdir(Path(__file__).parent)
-TARGET_DIR: Final[Path] = Path(__file__).parent / 'fzf'
+TARGET_DIR: Path = Path(__file__).parent / 'fzf'
 
 
 def error_handler(function: Callable, path: str, exc_info) -> None:
