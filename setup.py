@@ -10,7 +10,7 @@ with open('LICENSE', 'r') as fin:
 
 setuptools.setup(
     name='fzflib',
-    version='0.1.8',
+    version='0.1.9',
     license='MIT',
     author='Kyle L. Davis',
     author_email='AceofSpades5757.github@gmail.com',
