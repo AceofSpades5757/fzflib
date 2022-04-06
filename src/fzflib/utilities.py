@@ -2,8 +2,8 @@ from typing import Iterable
 from typing import Optional
 from typing import Union
 
-from fzf.constants import ENCODING
-from fzf.constants import FZFInputValues
+from fzflib.constants import ENCODING
+from fzflib.constants import FZFInputValues
 
 
 def resolve_input(input_values: Optional[FZFInputValues]) -> bytes:

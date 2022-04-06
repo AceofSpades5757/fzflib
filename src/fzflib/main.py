@@ -6,10 +6,10 @@ from typing import List
 from typing import Optional
 from typing import Union
 
-from fzf.constants import ENCODING
-from fzf.constants import MULTI_FLAG
-from fzf.logging_ import logging_config
-from fzf.utilities import resolve_input
+from fzflib.constants import ENCODING
+from fzflib.constants import MULTI_FLAG
+from fzflib.logging_ import logging_config
+from fzflib.utilities import resolve_input
 
 
 PathLike = Union[bytes, str, Path]
