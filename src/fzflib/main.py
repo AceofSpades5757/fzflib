@@ -44,7 +44,7 @@ class FZF:
         # Extra Arguments
         self.fzf_args: List = fzf_extras
 
-    def run(self, *args, **kwargs) -> Union[str, List[str]]:
+    def prompt(self, *args, **kwargs) -> Union[str, List[str]]:
         """Given current configuration, run fzf and return selection."""
 
         # Buid Command
