@@ -26,8 +26,8 @@ help:
 venv:
 	$(PYTHON) -m venv $(VENV_DIR)
 	${VENV_BIN}/pip install --upgrade pip
-	$(VENV_BIN)/pip install --upgrade -r requirments.txt
-	$(VENV_BIN)/pip install --upgrade -r requirments-dev.txt
+	$(VENV_BIN)/pip install --upgrade -r requirements.txt
+	$(VENV_BIN)/pip install --upgrade -r requirements-dev.txt
 
 test:
 	@echo "Testing $(PROJECT_NAME)."
