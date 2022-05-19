@@ -1,17 +1,19 @@
-# Variables
 PROJECT_NAME = fzflib
 VENV_DIR = .venv
 
 ifeq ($(OS),Windows_NT)
 	PYTHON = py
-	VENV_BIN = ./.venv/Scripts
+	VENV_BIN = ./$(VENV_DIR)/Scripts
 else
 	PYTHON = python3
-	VENV_BIN = ./.venv/bin
+	VENV_BIN = ./$(VENV_DIR)/bin
 endif
+VENV_PYTHON = $(VENV_BIN)/python.exe
+VENV_PIP = $(VENV_BIN)/pip.exe
 
 # Settings
 .DEFAULT_GOAL = help
+.PHONY: help test build clean publish venv
 
 
 help:
@@ -20,20 +22,20 @@ help:
 	@echo "make test    - Test."
 	@echo "make clean   - Clean build directories, temporary files, and caches."
 	@echo "make build   - Build with setup.py."
-	@echo "make release - Deploy to PyPi."
+	@echo "make publish - Deploy to PyPi."
 	@echo "----------------------------------------------"
 
 venv:
-	$(PYTHON) -m venv $(VENV_DIR)
-	${VENV_BIN}/pip install --upgrade pip
-	$(VENV_BIN)/pip install --upgrade -r requirements.txt
-	$(VENV_BIN)/pip install --upgrade -r requirements-dev.txt
+	$(PYTHON) -m pip install --upgrade pip
+	$(PYTHON) -m pip install --upgrade virtualenv
+	$(PYTHON) -m virtualenv $(VENV_DIR)
+	-$(VENV_PIP) install --upgrade pip
+	$(VENV_PIP) install --upgrade -r requirements.txt
+	$(VENV_PIP) install --upgrade -r dev-requirements.txt
 
 test:
 	@echo "Testing $(PROJECT_NAME)."
-	${VENV_BIN}/pip install --upgrade pip
-	${VENV_BIN}/pip install tox tox-gh-actions
-	${VENV_BIN}/tox
+	$(VENV_BIN)/tox
 
 clean:
 	@echo "Removing temporary files and caches."
@@ -47,9 +49,9 @@ clean:
 build:
 	@echo "Building $(PROJECT_NAME)."
 	# Build
-	${VENV_BIN}/python setup.py sdist bdist_wheel
+	$(VENV_PYTHON) setup.py sdist bdist_wheel
 
-release: clean build
+publish: build
 	@echo "Deploying $(PROJECT_NAME) to PyPi."
-	${VENV_BIN}/pip install --upgrade twine
-	${VENV_BIN}/python -m twine upload dist/*
+	$(VENV_PIP) install --upgrade twine
+	$(VENV_PYTHON) -m twine upload dist/*
