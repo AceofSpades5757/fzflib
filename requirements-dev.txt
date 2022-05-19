@@ -1,9 +1,0 @@
-# Local Package Installation
--e .
-
-# Build Tools
-wheel
-setuptools
-
-# Test Tools
-tox
