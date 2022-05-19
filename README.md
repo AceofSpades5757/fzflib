@@ -18,7 +18,7 @@ Using the official The Python Package Index (PyPI).
 
 ## Requirements
 
-* [FZF](https://github.com/junegunn/fzf)
+- [FZF](https://github.com/junegunn/fzf)
 
 # Usage
 
@@ -36,7 +36,7 @@ Use the FZF instance to search for various options.
 
 ```python
 fzf.input = ['option 1', 'option 2']
-fzf.run()
+fzf.prompt()
 ```
 
 Set different working directory, when running FZF.
