@@ -43,6 +43,22 @@ Set different working directory, when running FZF.
 
 `fzf.cwd: PathLike = '~'`
 
+## Command Line Utility
+
+Use the FZF Python class as a command line utility.
+
+Note that FZF is _already_ a command line utility and is far more powerful than this package when used from the command line.
+
+```sh
+$ py -m fzflib --help
+
+usage: __main__.py [-h] [--multi]
+
+optional arguments:
+  -h, --help  show this help message and exit
+  --multi     Mutliple selections. Default: False
+```
+
 ## Install FZF
 
 This will attempt to install FZF on your machine.
