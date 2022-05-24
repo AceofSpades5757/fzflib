@@ -9,7 +9,7 @@ with open('README.md', 'r', encoding='utf-8') as fin:
 
 setuptools.setup(
     name='fzflib',
-    version='0.1.12',
+    version='0.1.15',
     license='MIT',
     author='Kyle L. Davis',
     author_email='AceofSpades5757.github@gmail.com',
