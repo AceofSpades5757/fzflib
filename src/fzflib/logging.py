@@ -35,7 +35,7 @@ logging_config: dict = dict(
 )
 
 
-def get_logger(options: dict = None) -> "Logger":
+def get_logger(options: dict = None) -> "logging.Logger":
     """Get logger."""
 
     # Default Options
