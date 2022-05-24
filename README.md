@@ -1,8 +1,8 @@
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 
-![PyPI](https://img.shields.io/pypi/v/fzflib?color=darkred)
-![PyPI - Python Version](https://img.shields.io/pypi/pyversions/fzflib?label=Python%20Version&logo=python&logoColor=yellow)
-![PyPI - License](https://img.shields.io/pypi/l/fzflib?color=green)
+[![PyPI](https://img.shields.io/pypi/v/fzflib?color=darkred)](https://pypi.org/project/fzflib/)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/fzflib?label=Python%20Version&logo=python&logoColor=yellow)](https://pypi.org/project/fzflib/)
+[![PyPI - License](https://img.shields.io/pypi/l/fzflib?color=green)](https://github.com/AceofSpades5757/fzflib/blob/main/LICENSE)
 
 [![Tests](https://github.com/AceofSpades5757/fzflib/actions/workflows/tests.yml/badge.svg)](https://github.com/AceofSpades5757/fzflib/actions/workflows/tests.yml)
 
