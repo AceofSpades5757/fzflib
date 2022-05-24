@@ -1,4 +1,3 @@
-import logging.config
 import platform
 import subprocess
 from pathlib import Path
@@ -8,15 +7,14 @@ from typing import Union
 
 from fzflib.constants import ENCODING
 from fzflib.constants import MULTI_FLAG
-from fzflib.logging_ import logging_config
+from fzflib.logging import get_logger
 from fzflib.utilities import resolve_input
 
 
 PathLike = Union[bytes, str, Path]
 
 
-logging.config.dictConfig(logging_config)
-logger = logging.getLogger(__name__)
+logger = get_logger({'name': __name__})
 
 
 class FZF:
@@ -141,7 +139,9 @@ class FZF:
             ]
             options = []
             uri = 'junegunn/fzf'
+        else:
+            raise NotImplementedError('Unsupported method.')
 
         command: List[str] = [exe] + args + options + [uri]
 
-        subprocess.run(command)
+        subprocess.run(command, check=True)
