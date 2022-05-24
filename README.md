@@ -24,6 +24,10 @@ Using the official The Python Package Index (PyPI).
 
 - [FZF](https://github.com/junegunn/fzf)
 
+# Documentation
+
+View the documentation at [Read the Docs](https://img.shields.io/readthedocs/fzflib)
+
 # Usage
 
 Create an FZF instance.
