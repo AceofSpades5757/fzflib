@@ -8,8 +8,8 @@ else
 	PYTHON = python3
 	VENV_BIN = ./$(VENV_DIR)/bin
 endif
-VENV_PYTHON = $(VENV_BIN)/python.exe
-VENV_PIP = $(VENV_BIN)/pip.exe
+VENV_PYTHON = $(VENV_BIN)/python
+VENV_PIP = $(VENV_BIN)/pip
 
 # Settings
 .DEFAULT_GOAL = help
